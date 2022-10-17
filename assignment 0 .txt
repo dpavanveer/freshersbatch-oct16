@@ -1,0 +1,260 @@
+
+dpavanve@lin80034629 MINGW64 /
+$ mkdir project_dir
+dpavanve@lin80034629 MINGW64 /
+$ cd project_dir
+
+dpavanve@lin80034629 MINGW64 /project_dir
+$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in C:/Users/dpavanve/Downloads/PortableGit/project_dir/.git/
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ touch index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git commit -m "First change"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git add index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git commit -m "First change"
+[master (root-commit) 30eca6f] First change
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ touch info.txt
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ touch .gitignore
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git add touch.getignore
+fatal: pathspec 'touch.getignore' did not match any files
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git add .gitignore
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git commit
+[master 0f0cfd3]  commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git *.txt
+git: 'info.txt' is not a git command. See 'git --help'.
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ vi .gitignore
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git add index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git restore index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git add index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git restore index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git restore index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git alias add="my add"
+git: 'alias' is not a git command. See 'git --help'.
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ alias add="my add"
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git my add index.html
+git: 'my' is not a git command. See 'git --help'.
+
+The most similar command is
+        mv
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ alias add="my-add"
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git my-add index.html
+git: 'my-add' is not a git command. See 'git --help'.
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git config --global alias.my-add add
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git my-add index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git commit
+[master 9905a80] commit
+ 1 file changed, 6 insertions(+)
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git restore index.html
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git config --global user.username dpavanveer
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git remote add origin https://github.com/dpavanveer/project_dr.git
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 744 bytes | 248.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dpavanveer/project_dr.git
+ * [new branch]      master -> master
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ ^C
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$ git push origin master
+Everything up-to-date
+
+dpavanve@lin80034629 MINGW64 /project_dir (master)
+$
